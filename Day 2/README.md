@@ -163,3 +163,17 @@ One of the important concept in linux is the concept of standard input and outpu
 | ***cat file1 file2 > file3***| Joins two files (file1, file2) and stores the output in a new file (file3) |
 | ***echo hello > file1***| Instead of printing hello in terminal, it will store the output in file1 |
 | ***ls -a > file1***| Store all the filelist in file1 |
+
+## Search File
+---
+| Command | Description |
+| ------- | ----------- |
+| ***grep pattern filename***| Search for pattern in files |
+| ***grep -i pattern filename***| Case insensitive search |
+| ***grep -i -r pattern directory***| Recursively search pattern in the directory |
+| ***grep -i pattern filename***| Case insensitive search |
+| ***find root***| It will show all the files and directory that are inside of root directory |
+| ***find home -type d***| It will show all the directories that are inside of home directory |
+| ***find home -type f***| It will show all the files that are inside of home directory |
+| ***find home -type f -name 'file.txt'***| Find file by name in home directory |
+| ***find home -type f -iname 'file.txt'***| Find file by name in home directory (case-insensitive) |
