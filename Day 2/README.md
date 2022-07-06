@@ -177,3 +177,43 @@ One of the important concept in linux is the concept of standard input and outpu
 | ***find home -type f***| It will show all the files that are inside of home directory |
 | ***find home -type f -name 'file.txt'***| Find file by name in home directory |
 | ***find home -type f -iname 'file.txt'***| Find file by name in home directory (case-insensitive) |
+
+## Chaining Commands
+---
+- ### Ampersand Operator (&)
+  The ampersand operator (&) is used to run commands in the background. When you append "&" at the end of any command, the command will be executed in the background. You can even use "&" to run multiple commands in the background.
+
+  Run a single command with “&”:
+  ```sh
+  sleep 10 &
+  ```
+  Run multiple commands simultaneously using “&”:
+  ```sh
+  command1 & command2 & command3 &
+  ```
+
+- ### Logical And Operator (&&)
+  When you use the “&&” operator, you're instructing the system to run the second command only if the first command runs successfully. Thus, if the exit code of the first command doesn’t return “0”, then the second command won’t run.
+  ```sh
+  command1 && command2
+  ```
+  If command 1 returns a “0” error code, then command 2 will run; otherwise, the script stops.
+
+- ### Logical OR Operator (||)
+  This operator is used when you aren't sure that the first command will execute successfully. Thus, the OR command can be used for the second command to instruct it to perform what the first command couldn’t do. If the first command get execute, then the second command won't execute
+  ```sh
+  mkdir hello || echo hello
+  ```
+
+- ### Semicolon Operator (;)
+  It is used to run multiple commands sequentially in a single go. But it is important to note that the commands chained by (;) operator always executes sequentially. If two commands are separated by the operator, then the second command will always execute independently of the exit status of the first command. Unlike the ampersand operator, the execution of the second command is independent of the exit status of the first command. Even if the first command does not get successfully executed i.e, the exit status is non-zero, the second command will always execute.
+  ```sh
+  who;pwd;ls
+  ```
+
+- ### Piping (|) Operator
+  This operator sends the output of the first command to the input of the second command.
+  ```sh
+  ls -l | wc -l
+  ```
+  In the above command wc -l displays the number of lines. ls -l displays the lists the files in the system.  The first command displays the number of files in the directory. ls – l lists the names of the files and this output is sent to the next command which counts the number of lines in the input. As a result, by using pipe we get the number of files in the directory.
