@@ -127,3 +127,39 @@ We can remove nano from ubuntu by executing
 ```
 apt remove nano
 ```
+
+# Linux Commands
+## Basic Commands
+---
+| Command | Description |
+| ------- | ----------- |
+| ***ls***| Lists all files and directories in the present working directory |
+| ***ls -R***| 	Lists files in sub-directories as well |
+| ***ls -a***| 	Lists hidden files as well |
+| ***cd ~***| 	Navigate to HOME directory |
+| ***cd ..***| 	Move one level up |
+| ***cd /***| 	Navigate to root directory |
+| ***history***| 	Gives a list of all past commands typed in the current terminal session |
+| ***mkdir directoryname***| Creates a new directory in the present working directory or a at the specified path |
+| ***mv filename new_file_name***| Renames the file to a new filename |
+| ***mv file filepath***| Moves the files to the new location |
+| ***rm filename***| Deletes a file |
+| ***rm -r directory***| Recursively deletes a directory that contains inner file |
+| ***touch filename***| Create a new empty file |
+| ***cat filename***| Displays the file content |
+| ***more filename***| Displays and paginate file content. Can only scroll down. |
+| ***less filename***| Displays and paginate file content. We have to install it first. |
+| ***head filename***| Show first 10 lines of file content |
+| ***tail filename***| Show last 10 lines of file content |
+
+## Redirection
+---
+One of the important concept in linux is the concept of standard input and output. Standard input represents the keyboard and standard output represents the screen. We can always change the source of input and output which is known as **redirection**.
+
+***> and <*** is known  as redirection operator. ***>*** is used to redirect standard output and ***<*** is used to redirect standard input.
+
+| Command | Description |
+| ------- | ----------- |
+| ***cat file1 file2 > file3***| Joins two files (file1, file2) and stores the output in a new file (file3) |
+| ***echo hello > file1***| Instead of printing hello in terminal, it will store the output in file1 |
+| ***ls -a > file1***| Store all the filelist in file1 |
