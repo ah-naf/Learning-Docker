@@ -23,10 +23,21 @@ echo DB_USER=ahnaf >> .bashrc
 | ***ps***| Shows the process for current shell |
 | ***kill PID***| Kill the process of id PID  |
 
-## Managing User
+## Managing Users
 ---
 | Command | Description |
 | ------- | ----------- |
 | ***useradd [USERNAME]***| Add a new user |
+| ***adduser [USERNAME]***| Add a new user (RECOMMENDED) |
 | ***userdel [USERNAME]***| Remove an existing user |
 | ***passwd [USERNAME]***| Change the password of the user |
+| ***usermod -l test_account test_user***| Change the user login name |
+| ***usermod -s /bin/bash test_user***| It will create a bash shell for the user "test_user" |
+
+## Managing Groups
+---
+| Command | Description |
+| ------- | ----------- |
+| ***groupadd [GROUPNAME]***| Creates a new group |
+| ***usermod -G developers ahnaf***| Add ahnaf to developers group |
+| ***groups ahnaf***| Shows all the group that contains ahnaf as a user |
