@@ -15,3 +15,7 @@
 | ***docker container prune*** | Remove all stopped container |
 | ***docker image prune*** | Remove all dangling image |
 | ***docker image rm [IMAGE]*** | Remove image |
+| ***docker build -t [IMAGE_NAME]:[TAG_NAME] [DOCKERFILE_PATH]*** | Build an image with tag |
+| ***docker image tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]*** | Create an image with tag using existing image |
+| ***docker image save -o OUTPUT_FILE.[zip/tar] SOURCE_IMAGE*** | Export an image to local storage |
+| ***docker image load -i SOURCE_FILE.[zip/tar]*** | Import an image from local storage |
